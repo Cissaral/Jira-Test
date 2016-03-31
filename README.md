@@ -1,6 +1,6 @@
-# Mein einfacher Taschenrechner
+# Mein erster Taschenrechner
 
-Es soll ein Taschenrechner erstellt werden, der einfache Mathematikaufgaben ( z.B. 1+2) löst.
+Es soll ein Taschenrechner erstellt werden.
 
 ## Anforderungen:
 - Der Taschenrechner wird in AngularJS implementiert.
