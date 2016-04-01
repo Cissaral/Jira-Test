@@ -19,15 +19,36 @@ describe('TestModule', function() {
 beforeEach(module('taschenrechner'));
 it('Valider Wert in Textfeld eingegeben', function () {
 	eingabe1='no';
-    expect(eingabe1).toBe(var);
+    assert.isNumber(eingabe1, 'Eingabewert1 ist keine Zahl');
     eingabe2='xy';
-    expect(eingabe2).to.be.false();
+    assert.isNumber(eingabe2, 'Eingabewert2 ist keine Zahl');
 });
 
 
 describe("Calculation", function() {
   it("Berechnung prüfen", function() {
     var ergebnis = 4 + 6;
-    expect(ergebnis).toBe(10);
+    //expect(ergebnis).toBe(10);
+    assert.notEqual(ergebnis, 10, 'these numbers are not equal');
+
   });
+
+describe("CalculationNegativ", function() {
+  it("Berechnung prüfen", function() {
+    var ergebnis = 4 - 6;
+    //expect(ergebnis).toBe(10);
+    assert.notEqual(ergebnis, -2, 'these numbers are not equal');
+
+  });
+
+
+
+
+
 */
+<<<<<<< Updated upstream:app/controller/calculator.controller_test.spec.js
+=======
+
+
+
+>>>>>>> Stashed changes:Test/test.spec.js
