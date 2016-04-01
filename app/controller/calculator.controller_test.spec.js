@@ -1,10 +1,18 @@
-var expect=require ('chai').expect;
+//var expect = require('chai').expect;
 
 describe('TestModule', function() {
-beforeEach(module('taschenrechner'));
-it('Modul ist geladen', function () {
-    expect(module).to.be.true();
-}});
+    //beforeEach(module('taschenrechner'));
+
+     it('Modul ist geladen', function () {
+         //expect(true).to.be.true;
+        assert.isTrue(true, 'It worked!');
+    });
+
+    it('Eingaben prüfen ob gültige Zahl', function(){
+        var eingabe1 = 'no';
+        assert.isNumber(eingabe1);
+    });
+});
 
 
 /*describe('TestValue', function() {
@@ -23,6 +31,3 @@ describe("Calculation", function() {
     expect(ergebnis).toBe(10);
   });
 */
-
-
-});
