@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+<meta charset="UTF-8">
+<!-- Titel der Webseite im Browser -->
+<title>CalculatorApp</title>
+</head>
+
+<!-- Direktive, um die calculatorApp - Funktionalitaet im Body zu verwenden -->
+<body ng-app="calculatorApp" >
+
+<!-- Sichtfenster, das die jeweiligen Partials anzeigt -->
+<div ui-view ></div>
+
+<!-- Hier stehen alle AngularJS-Skipte, die wir verwenden -->
+
+<!-- Angular muss selbst eingebunden werden -->
+<script src="bower_components/angular/angular.js"></script>
+
+<!-- UI-Router, der zustaendig ist fuer das Frontend-Routing -->
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!-- Unsere eigene Applikation, die unter app/ in der Datei app.JS angesprochen wird -->
+<script src="app/app.js"></script>
+
+<script src="app/controller/calculator.controller.js"></script>
+
+</body>
+</html>
