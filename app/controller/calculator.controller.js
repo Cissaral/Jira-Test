@@ -10,11 +10,11 @@ function CalculatorCtrl(){
 	// Controller-Variable
 	vm.eingabe1 = '';
 	vm.eingabe2 = '';
-	vm.ergebnis;
 
 	// controller API
 	vm.isNumber = isNumber;
 	vm.calculation = calculation;
+	vm.submit = submit;
 
 	function isNumber (wert){
 		if (!isNaN(wert) || wert === ''){
@@ -27,19 +27,26 @@ function CalculatorCtrl(){
 
 	function calculation (eingabe1,operations,eingabe2){
 	switch(operations){
-		case '+' : 
-		vm.ergebnis = eingabe1 + eingabe2;
+		case '+' :
+		vm.ergebnis = parseInt(eingabe1) + parseInt(eingabe2);
 		break;
-		case '-' : 
-		vm.ergebnis = eingabe1 - eingabe2;
+
+		case '-' :
+		vm.ergebnis = parseInt(eingabe1) - parseInt(eingabe2);
 		break;
-		case '*' : 
-		vm.ergebnis = eingabe1 * eingabe2;
+
+		case '*' :
+		vm.ergebnis = parseInt(eingabe1) * parseInt(eingabe2);
 		break;
-		case '/' : 
-		vm.ergebnis = eingabe1 / eingabe2;
+
+		case '/' :
+		vm.ergebnis = parseInt(eingabe1) * parseInt(eingabe2);
 		break;
 	}
+	}
+
+	function submit(){
+	  calculation(vm.eingabe1, vm.operations, vm.eingabe2);
 	}
 }
 

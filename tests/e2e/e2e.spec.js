@@ -56,7 +56,6 @@ element(by.id('Button')).click();
 
 element(by.id('ergebnis')).isDisplayed().then(function(isVisible) {
 	expect(isVisible).to.equal(true);
-	expect(ergebnis).toBe(3);
  });
 
 });
