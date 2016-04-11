@@ -1,14 +1,15 @@
 <h1>Taschenrechner</h1>
 <form>
 <input type="text" placeholder="Eingabe1" id="eingabe1" ng-model="calculatorVm.eingabe1" />
-<select name="operations" size="0">
+<select name="operations" size="0" ng-model="calculatorVm.operations">
 <option selected> </option>
-<option>+</option>
-<option>-</option>
-<option>*</option>
-<option>/</option>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
 </select>
 <input type="text" placeholder="Eingabe2" id="eingabe2" ng-model="calculatorVm.eingabe2" />
 <input type="submit" value="Berechne"/>
 </form>
-<p  style="font-weight: bold; color: #ff0000;" id="InvalidValue" ng-hide="calculatorVm.isNumber(calculatorVm.eingabe1) || calculatorVm.isNumber(calculatorVm.eingabe2)">Murks FEHLER</p>
+<p  style="font-weight: bold; color: #ff0000;" id="InvalidValue" ng-hide="calculatorVm.isNumber(calculatorVm.eingabe1)">FEHLER Eingabe 1</p>
+<p  style="font-weight: bold; color: #ff0000;" id="InvalidValue" ng-hide="calculatorVm.isNumber(calculatorVm.eingabe2)">FEHLER Eingabe 2</p>
