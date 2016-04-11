@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      //'app/*.js',
-      'app/app.controller_test.spec.js',
-//      'node_modules/requirejs/require.js',
-//      'node_modules/karma-requirejs/lib/adapter.js',
-      'node_modules/karma-chai/adapter.js'
+      {pattern: 'bower_components/angular/angular.js', watched: false},
+      {pattern: 'bower_components/angular-mocks/angular-mocks.js', watched: false},
+      {pattern: 'bower_components/angular-ui-router/release/angular-ui-router.js', watched: false},
+      'app/*.js',
+      'app/controller/*.js'
     ],
 
 

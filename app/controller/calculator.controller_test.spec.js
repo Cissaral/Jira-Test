@@ -25,7 +25,7 @@ describe('TestModule', function() {
 
     it('Eingaben prüfen ob gültige Zahl', function(){
         var eingabe1 = 'no';
-        assert.isNumber(eingabe1);
+        assert.isNotNumber(eingabe1);
     });
 
 
@@ -65,9 +65,3 @@ describe("CalculationNegativ", function() {
 
 
 */
-<<<<<<< Updated upstream:app/controller/calculator.controller_test.spec.js
-=======
-
-
-
->>>>>>> Stashed changes:Test/test.spec.js
