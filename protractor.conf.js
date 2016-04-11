@@ -17,6 +17,9 @@ exports.config = {
   // parameter, all suites will run. If run with --suite=smoke or
   // --suite=smoke,full only the patterns matched by the specified suites will
   // run.
+  capabilities: {
+    'browserName': 'firefox' // or 'safari'
+  },
   framework: 'mocha',
   mochaOpts: {
     reporter: 'spec',
