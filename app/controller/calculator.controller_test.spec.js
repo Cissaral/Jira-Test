@@ -3,6 +3,21 @@
 describe('TestModule', function() {
     //beforeEach(module('taschenrechner'));
 
+
+    beforeEach (module('calculatorApp'));
+
+    var $rootScope, $Scope,$compile,$controller,vm;
+
+    beforeEach (inject(function (_$controller_,_$rootScope_){
+    $controller=_$controller_;
+    $rootScope=_$rootScope_;
+    $scope=$rootScope.$new();
+    vm= $controller('CalculatorCtrl',{'$rootScope':$rootScope, 'vm':$scope});
+    }));
+
+
+
+
      it('Modul ist geladen', function () {
          //expect(true).to.be.true;
         assert.isTrue(true, 'It worked!');
@@ -12,6 +27,10 @@ describe('TestModule', function() {
         var eingabe1 = 'no';
         assert.isNumber(eingabe1);
     });
+
+
+
+
 });
 
 
