@@ -48,7 +48,7 @@ describe('TestModule', function() {
     });
 
     
-      it("Berechnung prüfen", function() {
+      it("Berechnung prüfen +", function() {
         assert.isDefined(vm.calculation, 'Function calculation is defined!');
         vm.eingabe1=4;
         vm.eingabe2=6;
@@ -59,24 +59,38 @@ describe('TestModule', function() {
 
 
 
+        it("Berechnung prüfen -", function() {
+        vm.eingabe1=4;
+        vm.eingabe2=6;
+        vm.operations='-';
+        vm.calculation(vm.eingabe1,vm.operations,vm.eingabe2);
+        assert.equal(vm.ergebnis, '-2', 'the calculation delive the correct result');
+         });
+
+
+      it("Berechnung prüfen *", function() {
+            vm.eingabe1=3;
+            vm.eingabe2=3;
+            vm.operations='*';
+            vm.calculation(vm.eingabe1,vm.operations,vm.eingabe2);
+            assert.equal(vm.ergebnis, 9, 'the calculation delive the correct result');
+             });
+
+
+      it("Berechnung prüfen /", function() {
+            vm.eingabe1=9;
+            vm.eingabe2=3;
+            vm.operations='/';
+            vm.calculation(vm.eingabe1,vm.operations,vm.eingabe2);
+            assert.equal(vm.ergebnis, 3, 'the calculation delive the correct result');
+             });
+
+
+ 
+
 });
 
 
 
 
-/*
 
-
-describe("CalculationNegativ", function() {
-  it("Berechnung prüfen", function() {
-    var ergebnis = 4 - 6;
-    //expect(ergebnis).toBe(10);
-    assert.notEqual(ergebnis, -2, 'these numbers are not equal');
-
-  });
-
-
-
-
-
-*/

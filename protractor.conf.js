@@ -13,6 +13,10 @@ exports.config = {
            browser.resetUrl = 'file://';
   },
 
+  capabilities:{
+    'browserName': 'firefox'
+  },
+
   // Alternatively, suites may be used. When run without a command line
   // parameter, all suites will run. If run with --suite=smoke or
   // --suite=smoke,full only the patterns matched by the specified suites will
