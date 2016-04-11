@@ -16,34 +16,45 @@ describe('TestModule', function() {
     }));
 
 
-
-
      it('Modul ist geladen', function () {
          //expect(true).to.be.true;
-        assert.isTrue(true, 'It worked!');
+        //assert.isTrue(true, 'It worked!');
+          assert.isDefined(vm, 'controller is necessary for test enviroment!');
+
     });
 
-    it('Eingaben prüfen ob gültige Zahl', function(){
-        var eingabe1 = 'no';
-        assert.isNotNumber(eingabe1);
+
+    it('Eingaben prüfen ob gültige Zahl in Feld eingabe1', function(){
+        vm.eingabe1 = 1;
+        assert.isTrue(vm.isNumber(vm.eingabe1), 'this will pass it is a valid number');
     });
 
+    it('Eingaben prüfen ob ungültige Zahl erkannt wird (eingabe1)', function(){
+        vm.eingabe1 = 'no';
+        //assert.isNotNumber(vm.eingabe1);
+        assert.isNotTrue(vm.isNumber(vm.eingabe1), 'this will pass it is no valid number');
+
+    });
+
+
+   it('Eingaben prüfen ob gültige Zahl in Feld eingabe2', function(){
+        vm.eingabe2 = 101;
+        assert.isTrue(vm.isNumber(vm.eingabe2), 'this will pass it is a valid number');
+    });
+
+    it('Eingaben prüfen ob ungültige Zahl erkannt wird (eingabe2)', function(){
+        vm.eingabe2 = 'xy';
+        assert.isNotTrue(vm.isNumber(vm.eingabe2), 'this will pass it is no valid number');
+    });
 
 
 
 });
 
 
-/*describe('TestValue', function() {
-beforeEach(module('taschenrechner'));
-it('Valider Wert in Textfeld eingegeben', function () {
-	eingabe1='no';
-    assert.isNumber(eingabe1, 'Eingabewert1 ist keine Zahl');
-    eingabe2='xy';
-    assert.isNumber(eingabe2, 'Eingabewert2 ist keine Zahl');
-});
 
 
+/*
 describe("Calculation", function() {
   it("Berechnung prüfen", function() {
     var ergebnis = 4 + 6;
