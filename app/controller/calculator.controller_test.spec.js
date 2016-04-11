@@ -47,6 +47,16 @@ describe('TestModule', function() {
         assert.isNotTrue(vm.isNumber(vm.eingabe2), 'this will pass it is no valid number');
     });
 
+    
+      it("Berechnung prüfen", function() {
+        assert.isDefined(vm.calculation, 'Function calculation is defined!');
+        vm.eingabe1=4;
+        vm.eingabe2=6;
+        vm.operations='+';
+        vm.calculation(vm.eingabe1,vm.operations,vm.eingabe2);
+        assert.equal(vm.ergebnis, 10, 'the calculation delive the correct result');
+         });
+
 
 
 });
@@ -55,13 +65,7 @@ describe('TestModule', function() {
 
 
 /*
-describe("Calculation", function() {
-  it("Berechnung prüfen", function() {
-    var ergebnis = 4 + 6;
-    //expect(ergebnis).toBe(10);
-    assert.notEqual(ergebnis, 10, 'these numbers are not equal');
 
-  });
 
 describe("CalculationNegativ", function() {
   it("Berechnung prüfen", function() {
