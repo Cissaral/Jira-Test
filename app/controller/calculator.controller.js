@@ -40,7 +40,7 @@ function CalculatorCtrl(){
 		break;
 
 		case '/' :
-		vm.ergebnis = parseInt(eingabe1) * parseInt(eingabe2);
+		vm.ergebnis = parseInt(eingabe1) / parseInt(eingabe2);
 		break;
 	}
 	}
